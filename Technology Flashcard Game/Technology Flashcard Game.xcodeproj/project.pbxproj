@@ -148,6 +148,7 @@
 		2C43A4ED16D57EE200143C76 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A4EB16D57EE200143C76 /* MainStoryboard.storyboard */; };
 		2C43A50916D58E5E00143C76 /* Flashcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43A50816D58E5E00143C76 /* Flashcard.m */; };
 		2C43A50B16D5BEEE00143C76 /* IsThePictureTechnology.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A50A16D5BEEE00143C76 /* IsThePictureTechnology.txt */; };
+		2C4E02E516F967500043C5A8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E02E416F967500043C5A8 /* .gitignore */; };
 		2C55733E16F2358000C4D54A /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5572A316F2357F00C4D54A /* Airplane.png */; };
 		2C55733F16F2358000C4D54A /* AnalogClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5572A416F2357F00C4D54A /* AnalogClock.png */; };
 		2C55734016F2358000C4D54A /* Ant.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5572A516F2357F00C4D54A /* Ant.png */; };
@@ -386,6 +387,7 @@
 		2C43A50716D58E5E00143C76 /* Flashcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flashcard.h; sourceTree = "<group>"; };
 		2C43A50816D58E5E00143C76 /* Flashcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flashcard.m; sourceTree = "<group>"; };
 		2C43A50A16D5BEEE00143C76 /* IsThePictureTechnology.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IsThePictureTechnology.txt; sourceTree = "<group>"; };
+		2C4E02E416F967500043C5A8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = "Technology Flashcard Game/.gitignore"; sourceTree = "<group>"; };
 		2C5572A316F2357F00C4D54A /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
 		2C5572A416F2357F00C4D54A /* AnalogClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AnalogClock.png; sourceTree = "<group>"; };
 		2C5572A516F2357F00C4D54A /* Ant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ant.png; sourceTree = "<group>"; };
@@ -676,6 +678,7 @@
 		2C43A4C716D57EE100143C76 = {
 			isa = PBXGroup;
 			children = (
+				2C4E02E416F967500043C5A8 /* .gitignore */,
 				2C43A4D916D57EE100143C76 /* Technology Flashcard Game */,
 				2C43A4D216D57EE100143C76 /* Frameworks */,
 				2C43A4D116D57EE100143C76 /* Products */,
@@ -1105,6 +1108,7 @@
 				2C36E33616F3DA5100E723A1 /* 20TM.png in Resources */,
 				2CEFA0A116F7F71B00F39A3B /* blip.mp3 in Resources */,
 				2CEFA0A516F7F8F000F39A3B /* yeah.mp3 in Resources */,
+				2C4E02E516F967500043C5A8 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
