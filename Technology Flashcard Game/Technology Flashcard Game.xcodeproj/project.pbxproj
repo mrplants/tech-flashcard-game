@@ -146,7 +146,6 @@
 		2C43A4E816D57EE200143C76 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A4E716D57EE200143C76 /* Default@2x.png */; };
 		2C43A4EA16D57EE200143C76 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A4E916D57EE200143C76 /* Default-568h@2x.png */; };
 		2C43A4ED16D57EE200143C76 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A4EB16D57EE200143C76 /* MainStoryboard.storyboard */; };
-		2C43A4F016D57EE200143C76 /* TechnologyFlashcardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43A4EF16D57EE200143C76 /* TechnologyFlashcardViewController.m */; };
 		2C43A50916D58E5E00143C76 /* Flashcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43A50816D58E5E00143C76 /* Flashcard.m */; };
 		2C43A50B16D5BEEE00143C76 /* IsThePictureTechnology.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C43A50A16D5BEEE00143C76 /* IsThePictureTechnology.txt */; };
 		2C55733E16F2358000C4D54A /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5572A316F2357F00C4D54A /* Airplane.png */; };
@@ -384,8 +383,6 @@
 		2C43A4E716D57EE200143C76 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2C43A4E916D57EE200143C76 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2C43A4EC16D57EE200143C76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		2C43A4EE16D57EE200143C76 /* TechnologyFlashcardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TechnologyFlashcardViewController.h; sourceTree = "<group>"; };
-		2C43A4EF16D57EE200143C76 /* TechnologyFlashcardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechnologyFlashcardViewController.m; sourceTree = "<group>"; };
 		2C43A50716D58E5E00143C76 /* Flashcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flashcard.h; sourceTree = "<group>"; };
 		2C43A50816D58E5E00143C76 /* Flashcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flashcard.m; sourceTree = "<group>"; };
 		2C43A50A16D5BEEE00143C76 /* IsThePictureTechnology.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IsThePictureTechnology.txt; sourceTree = "<group>"; };
@@ -712,8 +709,6 @@
 				2C35CC5416F2226900931C8C /* Views */,
 				2C35CC5316F2225100931C8C /* Models */,
 				2C35CC5216F2221800931C8C /* TFGameViewControllers */,
-				2C43A4EE16D57EE200143C76 /* TechnologyFlashcardViewController.h */,
-				2C43A4EF16D57EE200143C76 /* TechnologyFlashcardViewController.m */,
 				2C43A4EB16D57EE200143C76 /* MainStoryboard.storyboard */,
 				2C35CC4916F2216500931C8C /* TFMainMenuViewController.h */,
 				2C35CC4A16F2216500931C8C /* TFMainMenuViewController.m */,
@@ -1122,7 +1117,6 @@
 			files = (
 				2C43A4E016D57EE100143C76 /* main.m in Sources */,
 				2C43A4E416D57EE200143C76 /* TechnologyFlashcardAppDelegate.m in Sources */,
-				2C43A4F016D57EE200143C76 /* TechnologyFlashcardViewController.m in Sources */,
 				2C43A50916D58E5E00143C76 /* Flashcard.m in Sources */,
 				2CA05DEC16EE7A3C00147BCF /* FlashcardView.m in Sources */,
 				2C35CC4816F21E1200931C8C /* TFGameViewController.m in Sources */,
