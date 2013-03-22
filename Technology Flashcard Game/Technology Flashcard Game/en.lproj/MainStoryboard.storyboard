@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0an-PJ-ESg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0an-PJ-ESg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -208,14 +208,12 @@
                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJx-B5-l4t">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2zX-gX-lwS"/>
+                                            <constraint firstAttribute="width" constant="106" id="EgX-Ba-Pye"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                     </textField>
                                     <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NAME:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZG-QZ-LZ1">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="56" id="JcJ-Qe-GgC"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -237,9 +235,6 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-DA-1LZ" customClass="TechnologyFlashcardGameButton">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="72" id="s3G-es-WBZ"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="ADD">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -270,6 +265,7 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="QuT-I6-9Bf" firstAttribute="centerX" secondItem="2Hg-yY-nR2" secondAttribute="centerX" type="default" id="0SF-wD-Myh"/>
                                     <constraint firstItem="Ha1-1h-u30" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1KI-it-tSm"/>
                                     <constraint firstItem="aZG-QZ-LZ1" firstAttribute="baseline" secondItem="6aa-DA-1LZ" secondAttribute="baseline" type="default" id="2FW-TQ-d1U"/>
                                     <constraint firstItem="Wao-zN-L5P" firstAttribute="top" secondItem="8BP-xQ-0Z4" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2pt-xj-lYT"/>
@@ -278,23 +274,22 @@
                                     <constraint firstAttribute="trailing" secondItem="ZZ4-ib-Jzh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CF0-yr-p7W"/>
                                     <constraint firstItem="2Hg-yY-nR2" firstAttribute="top" secondItem="QuT-I6-9Bf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CF4-Jh-swW"/>
                                     <constraint firstItem="ZZ4-ib-Jzh" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DcU-eb-sc5"/>
-                                    <constraint firstItem="xHA-rW-4nr" firstAttribute="centerX" secondItem="8BP-xQ-0Z4" secondAttribute="centerX" type="default" id="E6G-ee-vuY"/>
                                     <constraint firstItem="sEs-Cg-YOn" firstAttribute="top" secondItem="Ha1-1h-u30" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="F9o-La-0HS"/>
                                     <constraint firstItem="6aa-DA-1LZ" firstAttribute="bottom" secondItem="hJx-B5-l4t" secondAttribute="bottom" type="default" id="FqT-cp-phM"/>
+                                    <constraint firstItem="2Hg-yY-nR2" firstAttribute="centerX" secondItem="8BP-xQ-0Z4" secondAttribute="centerX" type="default" id="GOi-0d-XSf"/>
                                     <constraint firstItem="u3g-uY-5KD" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IC3-W7-Hkx"/>
                                     <constraint firstItem="hJx-B5-l4t" firstAttribute="leading" secondItem="aZG-QZ-LZ1" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KP3-NB-Wxo"/>
                                     <constraint firstItem="u3g-uY-5KD" firstAttribute="centerX" secondItem="gVb-i6-By2" secondAttribute="centerX" type="default" id="LbP-2N-3mC"/>
                                     <constraint firstItem="Ha1-1h-u30" firstAttribute="top" secondItem="u3g-uY-5KD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Log-1l-NCY"/>
                                     <constraint firstItem="QuT-I6-9Bf" firstAttribute="top" secondItem="Wao-zN-L5P" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O4W-fL-suQ"/>
                                     <constraint firstAttribute="bottom" secondItem="ZZ4-ib-Jzh" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="PwB-T0-9mf"/>
+                                    <constraint firstItem="6aa-DA-1LZ" firstAttribute="leading" secondItem="hJx-B5-l4t" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="QE4-Ln-fkv"/>
                                     <constraint firstItem="aZG-QZ-LZ1" firstAttribute="leading" secondItem="Wao-zN-L5P" secondAttribute="leading" type="default" id="R5o-fy-D87"/>
                                     <constraint firstItem="a0j-gO-vna" firstAttribute="top" secondItem="xHA-rW-4nr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Siu-y7-zRy"/>
                                     <constraint firstAttribute="trailing" secondItem="xHA-rW-4nr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Sw4-sx-Bey"/>
-                                    <constraint firstItem="QuT-I6-9Bf" firstAttribute="centerX" secondItem="2Hg-yY-nR2" secondAttribute="centerX" type="default" id="Utd-TD-Hmp"/>
                                     <constraint firstItem="gVb-i6-By2" firstAttribute="top" secondItem="8BP-xQ-0Z4" secondAttribute="top" constant="219" id="Uum-d4-KU5"/>
                                     <constraint firstItem="Wao-zN-L5P" firstAttribute="centerX" secondItem="QuT-I6-9Bf" secondAttribute="centerX" type="default" id="c7J-ne-3SH"/>
                                     <constraint firstAttribute="trailing" secondItem="u3g-uY-5KD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dAS-oA-4wL"/>
-                                    <constraint firstItem="Wao-zN-L5P" firstAttribute="trailing" secondItem="6aa-DA-1LZ" secondAttribute="trailing" type="default" id="dDD-b7-O7r"/>
                                     <constraint firstItem="a0j-gO-vna" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eA1-Ej-hXN"/>
                                     <constraint firstItem="xHA-rW-4nr" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eZf-Jw-JBj"/>
                                     <constraint firstItem="sEs-Cg-YOn" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gh9-3d-txq"/>
@@ -304,7 +299,6 @@
                                     <constraint firstAttribute="trailing" secondItem="sEs-Cg-YOn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qU9-4Y-Alq"/>
                                     <constraint firstItem="u3g-uY-5KD" firstAttribute="top" secondItem="2Hg-yY-nR2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="svY-Lo-zL8"/>
                                     <constraint firstItem="hJx-B5-l4t" firstAttribute="top" secondItem="6aa-DA-1LZ" secondAttribute="top" type="default" id="uP2-aP-WAP"/>
-                                    <constraint firstItem="6aa-DA-1LZ" firstAttribute="leading" secondItem="hJx-B5-l4t" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vp2-Rp-w1K"/>
                                     <constraint firstItem="ZZ4-ib-Jzh" firstAttribute="top" secondItem="8BP-xQ-0Z4" secondAttribute="top" constant="396" id="wF3-oY-VD0"/>
                                     <constraint firstItem="hJx-B5-l4t" firstAttribute="top" secondItem="8BP-xQ-0Z4" secondAttribute="top" constant="250" id="wMH-gK-lOT"/>
                                     <constraint firstAttribute="trailing" secondItem="Ha1-1h-u30" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zVr-kN-VQr"/>
@@ -314,7 +308,7 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8BP-xQ-0Z4" firstAttribute="leading" secondItem="sX4-4m-zTI" secondAttribute="leading" type="default" id="IaL-Cq-6fa"/>
                             <constraint firstItem="8BP-xQ-0Z4" firstAttribute="bottom" secondItem="sX4-4m-zTI" secondAttribute="bottom" type="default" id="R8o-o0-oR4"/>
@@ -439,7 +433,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbl-v7-kvL" customClass="TechnologyFlashcardGameButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbl-v7-kvL" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Fgf-4O-JtO"/>
                                     <constraint firstAttribute="height" constant="25" id="HzE-A7-aYU"/>
@@ -457,7 +451,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SBv-4a-Oe2" firstAttribute="top" secondItem="nxP-uD-NSA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0mQ-Mr-ClP"/>
                             <constraint firstItem="Jbl-v7-kvL" firstAttribute="centerX" secondItem="Qbx-hM-NEa" secondAttribute="centerX" type="default" id="4MO-3w-ZRI"/>
@@ -517,12 +511,11 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-6Q-YoM" customClass="TechnologyFlashcardGameButton">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-6Q-YoM" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="SHt-8h-Oqh"/>
-                                    <constraint firstAttribute="width" constant="150" id="uV9-sb-gze"/>
+                                    <constraint firstAttribute="height" constant="88" id="tZe-38-SUX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="EASY">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -534,11 +527,11 @@
                                     <segue destination="2" kind="push" identifier="startEasyGameSegue" id="QHc-d4-8wl"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88f-zH-70o" customClass="TechnologyFlashcardGameButton">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88f-zH-70o" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="uTi-z1-2nU"/>
+                                    <constraint firstAttribute="height" constant="88" id="ba6-Dl-opJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="MEDIUM">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -550,11 +543,11 @@
                                     <segue destination="2" kind="push" identifier="startMediumGameSegue" id="GPM-JB-LEc"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-C1-Num" customClass="TechnologyFlashcardGameButton">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-C1-Num" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="HWK-VD-d9f"/>
+                                    <constraint firstAttribute="height" constant="89" id="TgX-XN-5De"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="HARD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -566,21 +559,61 @@
                                     <segue destination="2" kind="push" identifier="startHardGameSegue" id="Av2-Rz-b3p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-Hx-7bF" customClass="TechnologyFlashcardGameButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="RF7-hk-PuN"/>
+                                    <constraint firstAttribute="width" constant="184" id="ld2-Ky-Qxh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="RESET HIGH SCORES">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetHighScoresButtonTouchUpInside" destination="zQe-tu-zeu" eventType="touchUpInside" id="Qat-lC-U2U"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-a7-czn">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="EiE Logo_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-aj-wGO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="MzG-eo-CSI"/>
+                                            <constraint firstAttribute="width" constant="230" id="h91-ob-tON"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gXF-aj-wGO" firstAttribute="leading" secondItem="Ini-a7-czn" secondAttribute="leading" constant="-6" id="I7z-iE-KAR"/>
+                                    <constraint firstItem="gXF-aj-wGO" firstAttribute="top" secondItem="Ini-a7-czn" secondAttribute="top" constant="13" id="YGq-AJ-qht"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="88f-zH-70o" firstAttribute="centerY" secondItem="KVh-fz-hil" secondAttribute="centerY" type="default" id="26f-tA-neS"/>
-                            <constraint firstItem="88f-zH-70o" firstAttribute="leading" secondItem="3VH-6Q-YoM" secondAttribute="leading" type="default" id="3zB-nJ-780"/>
-                            <constraint firstAttribute="bottom" secondItem="zaO-C1-Num" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6Pm-eJ-Eip"/>
-                            <constraint firstItem="3VH-6Q-YoM" firstAttribute="top" secondItem="KVh-fz-hil" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7we-i1-bIS"/>
-                            <constraint firstItem="zaO-C1-Num" firstAttribute="leading" secondItem="88f-zH-70o" secondAttribute="leading" type="default" id="P4h-BT-AkY"/>
-                            <constraint firstItem="zaO-C1-Num" firstAttribute="trailing" secondItem="88f-zH-70o" secondAttribute="trailing" type="default" id="op7-3f-HY3"/>
-                            <constraint firstItem="88f-zH-70o" firstAttribute="centerX" secondItem="KVh-fz-hil" secondAttribute="centerX" type="default" id="pjm-na-GD3"/>
-                            <constraint firstItem="88f-zH-70o" firstAttribute="trailing" secondItem="3VH-6Q-YoM" secondAttribute="trailing" type="default" id="wqf-la-rie"/>
+                            <constraint firstItem="Ini-a7-czn" firstAttribute="top" secondItem="KVh-fz-hil" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3Sd-6U-GdZ"/>
+                            <constraint firstItem="v3I-Hx-7bF" firstAttribute="centerX" secondItem="zaO-C1-Num" secondAttribute="centerX" type="default" id="3gx-uT-XxH"/>
+                            <constraint firstItem="Ini-a7-czn" firstAttribute="centerX" secondItem="3VH-6Q-YoM" secondAttribute="centerX" type="default" id="7OB-aK-2PD"/>
+                            <constraint firstItem="Ini-a7-czn" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="50" id="7v4-US-h2E"/>
+                            <constraint firstAttribute="trailing" secondItem="3VH-6Q-YoM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gd6-Gz-giR"/>
+                            <constraint firstItem="3VH-6Q-YoM" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PBu-bu-1ku"/>
+                            <constraint firstItem="zaO-C1-Num" firstAttribute="top" secondItem="88f-zH-70o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dbp-jF-iRk"/>
+                            <constraint firstAttribute="trailing" secondItem="zaO-C1-Num" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lFB-0o-pWt"/>
+                            <constraint firstItem="88f-zH-70o" firstAttribute="top" secondItem="3VH-6Q-YoM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oeM-vl-Axk"/>
+                            <constraint firstAttribute="bottom" secondItem="v3I-Hx-7bF" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="q9i-do-goY"/>
+                            <constraint firstItem="zaO-C1-Num" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qaQ-Hf-bnu"/>
+                            <constraint firstItem="v3I-Hx-7bF" firstAttribute="top" secondItem="zaO-C1-Num" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rGe-F4-VjD"/>
+                            <constraint firstItem="3VH-6Q-YoM" firstAttribute="top" secondItem="Ini-a7-czn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v2y-AD-kEv"/>
+                            <constraint firstItem="88f-zH-70o" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yyH-Bs-sdy"/>
+                            <constraint firstAttribute="trailing" secondItem="88f-zH-70o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zm6-7r-94P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main View" id="8X3-EE-fGX"/>
                     <connections>
+                        <outlet property="EiELogoView" destination="Ini-a7-czn" id="7yv-7Y-8nA"/>
                         <outlet property="easyButton" destination="3VH-6Q-YoM" id="haT-yD-TtG"/>
                         <outlet property="hardButton" destination="zaO-C1-Num" id="eiR-PZ-pLI"/>
                         <outlet property="mediumButton" destination="88f-zH-70o" id="zac-mh-0Mm"/>
@@ -588,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K75-Lt-4T8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="-489"/>
+            <point key="canvasLocation" x="256" y="-489"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0J4-S6-Sm2">
@@ -609,6 +642,74 @@
             <point key="canvasLocation" x="-184" y="-489"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EiE Logo_small.png" width="957" height="365"/>
+    </resources>
+    <classes>
+        <class className="FlashcardView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlashcardView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TFGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cardNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="correctImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentFlashCardView" candidateClass="FlashcardView"/>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameProgressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="isThisTechnologyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="noTechnologyButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="yesTechnologyButton" candidateClass="TechnologyFlashcardGameButton"/>
+            </relationships>
+        </class>
+        <class className="TFMainMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFMainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="EiELogoView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="easyButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="hardButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="mediumButton" candidateClass="TechnologyFlashcardGameButton"/>
+            </relationships>
+        </class>
+        <class className="TFPostGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFPostGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="addNewHighScoreLabel" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="fifthHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fourthHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="highScoresLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="secondHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thirdHighScoreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TFPreGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFPreGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="fifthHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fourthHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resetHighScoresButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="secondHighScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startGameButton" candidateClass="TechnologyFlashcardGameButton"/>
+                <relationship kind="outlet" name="thirdHighScoreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TechnologyFlashcardGameButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TechnologyFlashcardGameButton.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

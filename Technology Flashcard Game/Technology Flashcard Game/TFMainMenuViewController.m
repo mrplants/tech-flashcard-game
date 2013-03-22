@@ -11,6 +11,7 @@
 #import "TechnologyFlashcardGameButton.h"
 #import "TFDeckDealer.h"
 #import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TFMainMenuViewController ()
 
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet TechnologyFlashcardGameButton *easyButton;
 @property (weak, nonatomic) IBOutlet TechnologyFlashcardGameButton *mediumButton;
 @property (weak, nonatomic) IBOutlet TechnologyFlashcardGameButton *hardButton;
+@property (weak, nonatomic) IBOutlet UIView *EiELogoView;
 
 #pragma mark - MODEL
 @property (nonatomic, strong) TFDeckDealer * deckDealer;
@@ -36,6 +38,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[self.navigationController setNavigationBarHidden:YES animated:animated];
+	self.EiELogoView.layer.cornerRadius = 15;
+	self.EiELogoView.clipsToBounds = YES;
 	[super viewWillAppear:animated];
 }
 
@@ -97,6 +101,10 @@
 	}
 
 
+}
+- (IBAction)resetHighScoresButtonTouchUpInside
+{
+	[NSUserDefaults resetStandardUserDefaults];
 }
 
 @end
