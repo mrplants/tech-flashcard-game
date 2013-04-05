@@ -75,7 +75,8 @@
 #define SPEED_OF_FLASHCARD_CHANGE (0.2)
 //measured in seconds
 
-
+#define SHOULD_HAVE_SOUND (YES)
+//specify YES or NO whether or not the app should have sound
 
 
 

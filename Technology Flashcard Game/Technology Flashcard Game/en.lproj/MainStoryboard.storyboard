@@ -235,6 +235,9 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-DA-1LZ" customClass="TechnologyFlashcardGameButton">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="wfu-Hp-bst"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="ADD">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,12 +274,12 @@
                                     <constraint firstItem="Wao-zN-L5P" firstAttribute="top" secondItem="8BP-xQ-0Z4" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2pt-xj-lYT"/>
                                     <constraint firstItem="2Hg-yY-nR2" firstAttribute="centerX" secondItem="u3g-uY-5KD" secondAttribute="centerX" type="default" id="4nd-qg-A3c"/>
                                     <constraint firstItem="6aa-DA-1LZ" firstAttribute="baseline" secondItem="hJx-B5-l4t" secondAttribute="baseline" type="default" id="503-fV-N2z"/>
+                                    <constraint firstItem="a0j-gO-vna" firstAttribute="centerX" secondItem="8BP-xQ-0Z4" secondAttribute="centerX" type="default" id="5A1-Ka-XVc"/>
+                                    <constraint firstItem="6aa-DA-1LZ" firstAttribute="centerY" secondItem="hJx-B5-l4t" secondAttribute="centerY" type="default" id="ArJ-pK-LRu"/>
                                     <constraint firstAttribute="trailing" secondItem="ZZ4-ib-Jzh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CF0-yr-p7W"/>
                                     <constraint firstItem="2Hg-yY-nR2" firstAttribute="top" secondItem="QuT-I6-9Bf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CF4-Jh-swW"/>
                                     <constraint firstItem="ZZ4-ib-Jzh" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DcU-eb-sc5"/>
                                     <constraint firstItem="sEs-Cg-YOn" firstAttribute="top" secondItem="Ha1-1h-u30" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="F9o-La-0HS"/>
-                                    <constraint firstItem="6aa-DA-1LZ" firstAttribute="bottom" secondItem="hJx-B5-l4t" secondAttribute="bottom" type="default" id="FqT-cp-phM"/>
-                                    <constraint firstItem="2Hg-yY-nR2" firstAttribute="centerX" secondItem="8BP-xQ-0Z4" secondAttribute="centerX" type="default" id="GOi-0d-XSf"/>
                                     <constraint firstItem="u3g-uY-5KD" firstAttribute="leading" secondItem="8BP-xQ-0Z4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IC3-W7-Hkx"/>
                                     <constraint firstItem="hJx-B5-l4t" firstAttribute="leading" secondItem="aZG-QZ-LZ1" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KP3-NB-Wxo"/>
                                     <constraint firstItem="u3g-uY-5KD" firstAttribute="centerX" secondItem="gVb-i6-By2" secondAttribute="centerX" type="default" id="LbP-2N-3mC"/>
@@ -513,9 +516,9 @@
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-6Q-YoM" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="tZe-38-SUX"/>
+                                    <constraint firstAttribute="height" constant="88" type="user" id="tZe-38-SUX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <state key="normal" title="EASY">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -529,9 +532,9 @@
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88f-zH-70o" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="ba6-Dl-opJ"/>
+                                    <constraint firstAttribute="height" constant="88" type="user" id="ba6-Dl-opJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <state key="normal" title="MEDIUM">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -545,9 +548,9 @@
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-C1-Num" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="TgX-XN-5De"/>
+                                    <constraint firstAttribute="height" constant="89" type="user" id="TgX-XN-5De"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <state key="normal" title="HARD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -561,7 +564,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-Hx-7bF" customClass="TechnologyFlashcardGameButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="RF7-hk-PuN"/>
+                                    <constraint firstAttribute="height" constant="26" type="user" id="RF7-hk-PuN"/>
                                     <constraint firstAttribute="width" constant="184" id="ld2-Ky-Qxh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -580,7 +583,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="EiE Logo_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-aj-wGO">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="MzG-eo-CSI"/>
+                                            <constraint firstAttribute="height" constant="72" type="user" id="MzG-eo-CSI"/>
                                             <constraint firstAttribute="width" constant="230" id="h91-ob-tON"/>
                                         </constraints>
                                     </imageView>
@@ -589,24 +592,24 @@
                                 <constraints>
                                     <constraint firstItem="gXF-aj-wGO" firstAttribute="leading" secondItem="Ini-a7-czn" secondAttribute="leading" constant="-6" id="I7z-iE-KAR"/>
                                     <constraint firstItem="gXF-aj-wGO" firstAttribute="top" secondItem="Ini-a7-czn" secondAttribute="top" constant="13" id="YGq-AJ-qht"/>
+                                    <constraint firstAttribute="height" constant="97" type="user" id="uVt-Aa-hVT"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ini-a7-czn" firstAttribute="top" secondItem="KVh-fz-hil" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3Sd-6U-GdZ"/>
+                            <constraint firstItem="Ini-a7-czn" firstAttribute="top" secondItem="KVh-fz-hil" secondAttribute="top" constant="20" symbolic="YES" type="user" id="3Sd-6U-GdZ"/>
                             <constraint firstItem="v3I-Hx-7bF" firstAttribute="centerX" secondItem="zaO-C1-Num" secondAttribute="centerX" type="default" id="3gx-uT-XxH"/>
                             <constraint firstItem="Ini-a7-czn" firstAttribute="centerX" secondItem="3VH-6Q-YoM" secondAttribute="centerX" type="default" id="7OB-aK-2PD"/>
                             <constraint firstItem="Ini-a7-czn" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="50" id="7v4-US-h2E"/>
                             <constraint firstAttribute="trailing" secondItem="3VH-6Q-YoM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gd6-Gz-giR"/>
                             <constraint firstItem="3VH-6Q-YoM" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PBu-bu-1ku"/>
-                            <constraint firstItem="zaO-C1-Num" firstAttribute="top" secondItem="88f-zH-70o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dbp-jF-iRk"/>
+                            <constraint firstItem="zaO-C1-Num" firstAttribute="top" secondItem="88f-zH-70o" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="dbp-jF-iRk"/>
                             <constraint firstAttribute="trailing" secondItem="zaO-C1-Num" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lFB-0o-pWt"/>
-                            <constraint firstItem="88f-zH-70o" firstAttribute="top" secondItem="3VH-6Q-YoM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oeM-vl-Axk"/>
-                            <constraint firstAttribute="bottom" secondItem="v3I-Hx-7bF" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="q9i-do-goY"/>
+                            <constraint firstItem="88f-zH-70o" firstAttribute="top" secondItem="3VH-6Q-YoM" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="oeM-vl-Axk"/>
                             <constraint firstItem="zaO-C1-Num" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qaQ-Hf-bnu"/>
-                            <constraint firstItem="v3I-Hx-7bF" firstAttribute="top" secondItem="zaO-C1-Num" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rGe-F4-VjD"/>
-                            <constraint firstItem="3VH-6Q-YoM" firstAttribute="top" secondItem="Ini-a7-czn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v2y-AD-kEv"/>
+                            <constraint firstItem="v3I-Hx-7bF" firstAttribute="top" secondItem="zaO-C1-Num" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="rGe-F4-VjD"/>
+                            <constraint firstItem="3VH-6Q-YoM" firstAttribute="top" secondItem="Ini-a7-czn" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="v2y-AD-kEv"/>
                             <constraint firstItem="88f-zH-70o" firstAttribute="leading" secondItem="KVh-fz-hil" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yyH-Bs-sdy"/>
                             <constraint firstAttribute="trailing" secondItem="88f-zH-70o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zm6-7r-94P"/>
                         </constraints>

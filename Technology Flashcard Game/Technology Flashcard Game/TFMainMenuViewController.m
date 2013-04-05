@@ -104,7 +104,14 @@
 }
 - (IBAction)resetHighScoresButtonTouchUpInside
 {
-	[NSUserDefaults resetStandardUserDefaults];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORES_EASY];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORE_NAMES_EASY];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORES_MEDIUM];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORE_NAMES_MEDIUM];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORES_HARD];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORE_NAMES_HARD];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORES_EASY];
+	[[NSUserDefaults standardUserDefaults] setObject:NULL forKey:TF_FIVE_HIGH_SCORE_NAMES_EASY];
 }
 
 @end

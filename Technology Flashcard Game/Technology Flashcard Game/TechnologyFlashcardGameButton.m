@@ -9,9 +9,15 @@
 #import "TechnologyFlashcardGameButton.h"
 #import "Constants.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @interface TechnologyFlashcardGameButton ()
 
+@property (nonatomic, strong) AVAudioPlayer * player;
+
+@property (nonatomic) BOOL shouldPlayButtonTone;
 
 @end
 
@@ -25,6 +31,7 @@
 		self.imageView.contentMode = UIViewContentModeScaleToFill;
 		[self setTitleColor:[super titleColorForState:UIControlStateNormal] forState:UIControlStateHighlighted];
 		[self setupView];
+		[self setupAudioPlayer];
 	}
 	return self;
 }
@@ -37,6 +44,7 @@
 		self.imageView.contentMode = UIViewContentModeScaleToFill;
 		[self setTitleColor:[super titleColorForState:UIControlStateNormal] forState:UIControlStateHighlighted];
 		[self setupView];
+		[self setupAudioPlayer];
 	}
 	return self;
 }
@@ -49,6 +57,7 @@
 			self.imageView.contentMode = UIViewContentModeScaleToFill;
 			[self setTitleColor:[super titleColorForState:UIControlStateNormal] forState:UIControlStateHighlighted];
 			[self setupView];
+			[self setupAudioPlayer];
    }
     return self;
 }
@@ -58,6 +67,12 @@
 	[self setupView];
 }
 
+-(void) setupAudioPlayer
+{
+	self.shouldPlayButtonTone = SHOULD_HAVE_SOUND;
+	NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"blip" ofType:@"mp3"]];	
+	self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+}
 
 -(void) addLightGradient
 {
@@ -137,6 +152,8 @@
 	{
 		[self addLightGradient];
 		[self clearHighlightView];
+		[self.player setCurrentTime:0.0];
+		[self.player play];
 	}
 	
 	[super setHighlighted:highlighted];
@@ -179,6 +196,8 @@
 	self.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
 	self.layer.shadowOpacity = 0.5;
 }
+
+
 
 @end
 
