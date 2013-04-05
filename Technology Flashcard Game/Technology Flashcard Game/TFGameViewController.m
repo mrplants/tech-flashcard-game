@@ -135,8 +135,15 @@
 - (IBAction)noTechnologyButtonPress
 {
 	if ([(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) isTechnology])
+	{
+		self.descriptionLabel.text = @"This is technology!";
 		[self showAnswerIncorrect];
-	else [self showAnswerCorrect];
+	}
+	else
+	{
+		self.descriptionLabel.text = @"This is NOT technology.";
+		[self showAnswerCorrect];
+	}
 	
 	self.yesTechnologyButton.hidden = YES;
 	self.noTechnologyButton.hidden = YES;
@@ -147,8 +154,16 @@
 - (IBAction)yesTechnologyButtonPressed
 {
 	if ([(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) isTechnology])
+	{
+		self.descriptionLabel.text = @"This is technology!";
 		[self showAnswerCorrect];
-	else [self showAnswerIncorrect];
+	}
+	else
+	{
+		self.descriptionLabel.text = @"This is NOT technology.";
+		[self showAnswerIncorrect];
+	}
+	
 	
 	self.yesTechnologyButton.hidden = YES;
 	self.noTechnologyButton.hidden = YES;
