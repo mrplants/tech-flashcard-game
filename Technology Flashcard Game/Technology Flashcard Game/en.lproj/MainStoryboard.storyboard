@@ -682,6 +682,7 @@
         <class className="TFPostGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TFPostGameViewController.h"/>
             <relationships>
+                <relationship kind="action" name="tappedBackground:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="addHighScoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="addNewHighScoreLabel" candidateClass="TechnologyFlashcardGameButton"/>
                 <relationship kind="outlet" name="fifthHighScoreLabel" candidateClass="UILabel"/>
