@@ -233,7 +233,6 @@
 		2CA05DE916EE785100147BCF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA05DE816EE785100147BCF /* background.png */; };
 		2CA05DEC16EE7A3C00147BCF /* FlashcardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */; };
 		2CE857CE16FCCD9700BADFFA /* EiE Logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE857CD16FCCD9700BADFFA /* EiE Logo_small.png */; };
-		2CE857D216FD15FB00BADFFA /* sadTrombones .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CE857D116FD15FB00BADFFA /* sadTrombones .mp3 */; };
 		2CE857D416FD174000BADFFA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE857D316FD174000BADFFA /* AudioToolbox.framework */; };
 		2CE857D616FD174400BADFFA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE857D516FD174400BADFFA /* AVFoundation.framework */; };
 		2CEFA0A116F7F71B00F39A3B /* blip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CEFA0A016F7F71B00F39A3B /* blip.mp3 */; };
@@ -480,7 +479,6 @@
 		2CA05DEA16EE7A3C00147BCF /* FlashcardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashcardView.h; sourceTree = "<group>"; };
 		2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashcardView.m; sourceTree = "<group>"; };
 		2CE857CD16FCCD9700BADFFA /* EiE Logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EiE Logo_small.png"; sourceTree = "<group>"; };
-		2CE857D116FD15FB00BADFFA /* sadTrombones .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "sadTrombones .mp3"; path = "../../../../sounds/sadTrombones .mp3"; sourceTree = "<group>"; };
 		2CE857D316FD174000BADFFA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CE857D516FD174400BADFFA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2CEFA0A016F7F71B00F39A3B /* blip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blip.mp3; sourceTree = "<group>"; };
@@ -843,7 +841,6 @@
 			isa = PBXGroup;
 			children = (
 				2CEFA0A416F7F8F000F39A3B /* yeah.mp3 */,
-				2CE857D116FD15FB00BADFFA /* sadTrombones .mp3 */,
 				2CEFA0A016F7F71B00F39A3B /* blip.mp3 */,
 			);
 			name = sounds;
@@ -1124,7 +1121,6 @@
 				2CEFA0A516F7F8F000F39A3B /* yeah.mp3 in Resources */,
 				2C4E02E516F967500043C5A8 /* .gitignore in Resources */,
 				2CE857CE16FCCD9700BADFFA /* EiE Logo_small.png in Resources */,
-				2CE857D216FD15FB00BADFFA /* sadTrombones .mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
