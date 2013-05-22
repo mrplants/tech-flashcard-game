@@ -251,9 +251,9 @@
 		2C7543E9174C622A00B353D0 /* TyingShoe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543D3174C622A00B353D0 /* TyingShoe.png */; };
 		2C7543EA174C622A00B353D0 /* VacuumCleaner.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543D4174C622A00B353D0 /* VacuumCleaner.png */; };
 		2C7543EB174C622A00B353D0 /* Wheelchair.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543D5174C622A00B353D0 /* Wheelchair.png */; };
-		2C7543ED174C660500B353D0 /* sadTrombones .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543EC174C660500B353D0 /* sadTrombones .mp3 */; };
-		2C7C92C21733E76300C60CF0 /* NT Items.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C01733E76300C60CF0 /* NT Items.txt */; };
-		2C7C92C31733E76300C60CF0 /* T Items.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C11733E76300C60CF0 /* T Items.txt */; };
+		2C7543ED174C660500B353D0 /* sadTrombones.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543EC174C660500B353D0 /* sadTrombones.mp3 */; };
+		2C7C92C21733E76300C60CF0 /* NT Items.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C01733E76300C60CF0 /* NT Items.csv */; };
+		2C7C92C31733E76300C60CF0 /* T Items.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C11733E76300C60CF0 /* T Items.csv */; };
 		2CA05DE716EE514100147BCF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA05DE616EE514100147BCF /* CoreImage.framework */; };
 		2CA05DE916EE785100147BCF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA05DE816EE785100147BCF /* background.png */; };
 		2CA05DEC16EE7A3C00147BCF /* FlashcardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */; };
@@ -521,9 +521,9 @@
 		2C7543D3174C622A00B353D0 /* TyingShoe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TyingShoe.png; sourceTree = "<group>"; };
 		2C7543D4174C622A00B353D0 /* VacuumCleaner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VacuumCleaner.png; sourceTree = "<group>"; };
 		2C7543D5174C622A00B353D0 /* Wheelchair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheelchair.png; sourceTree = "<group>"; };
-		2C7543EC174C660500B353D0 /* sadTrombones .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sadTrombones .mp3"; sourceTree = "<group>"; };
-		2C7C92C01733E76300C60CF0 /* NT Items.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NT Items.txt"; sourceTree = "<group>"; };
-		2C7C92C11733E76300C60CF0 /* T Items.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "T Items.txt"; sourceTree = "<group>"; };
+		2C7543EC174C660500B353D0 /* sadTrombones.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadTrombones.mp3; sourceTree = "<group>"; };
+		2C7C92C01733E76300C60CF0 /* NT Items.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NT Items.csv"; sourceTree = "<group>"; };
+		2C7C92C11733E76300C60CF0 /* T Items.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "T Items.csv"; sourceTree = "<group>"; };
 		2CA05DE616EE514100147BCF /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		2CA05DE816EE785100147BCF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		2CA05DEA16EE7A3C00147BCF /* FlashcardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashcardView.h; sourceTree = "<group>"; };
@@ -782,8 +782,8 @@
 		2C43A4DA16D57EE100143C76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C7C92C01733E76300C60CF0 /* NT Items.txt */,
-				2C7C92C11733E76300C60CF0 /* T Items.txt */,
+				2C7C92C01733E76300C60CF0 /* NT Items.csv */,
+				2C7C92C11733E76300C60CF0 /* T Items.csv */,
 				2C4E02E416F967500043C5A8 /* .gitignore */,
 				2CEFA0A316F7F73300F39A3B /* images */,
 				2CEFA0A216F7F72500F39A3B /* sounds */,
@@ -914,7 +914,7 @@
 		2CEFA0A216F7F72500F39A3B /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				2C7543EC174C660500B353D0 /* sadTrombones .mp3 */,
+				2C7543EC174C660500B353D0 /* sadTrombones.mp3 */,
 				2CEFA0A416F7F8F000F39A3B /* yeah.mp3 */,
 				2CEFA0A016F7F71B00F39A3B /* blip.mp3 */,
 			);
@@ -1196,8 +1196,8 @@
 				2CEFA0A516F7F8F000F39A3B /* yeah.mp3 in Resources */,
 				2C4E02E516F967500043C5A8 /* .gitignore in Resources */,
 				2CE857CE16FCCD9700BADFFA /* EiE Logo_small.png in Resources */,
-				2C7C92C21733E76300C60CF0 /* NT Items.txt in Resources */,
-				2C7C92C31733E76300C60CF0 /* T Items.txt in Resources */,
+				2C7C92C21733E76300C60CF0 /* NT Items.csv in Resources */,
+				2C7C92C31733E76300C60CF0 /* T Items.csv in Resources */,
 				2C7543D6174C622A00B353D0 /* AssemblyLine.png in Resources */,
 				2C7543D7174C622A00B353D0 /* BaggageClaim.png in Resources */,
 				2C7543D8174C622A00B353D0 /* BeaverDam.png in Resources */,
@@ -1220,7 +1220,7 @@
 				2C7543E9174C622A00B353D0 /* TyingShoe.png in Resources */,
 				2C7543EA174C622A00B353D0 /* VacuumCleaner.png in Resources */,
 				2C7543EB174C622A00B353D0 /* Wheelchair.png in Resources */,
-				2C7543ED174C660500B353D0 /* sadTrombones .mp3 in Resources */,
+				2C7543ED174C660500B353D0 /* sadTrombones.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

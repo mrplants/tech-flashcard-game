@@ -9,6 +9,8 @@
 #import "TFPostGameViewController.h"
 #import "TechnologyFlashcardGameButton.h"
 #import "Constants.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface TFPostGameViewController ()
 
@@ -33,6 +35,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UITextField *activeField;
+
+//for the audio player
+@property (nonatomic, strong) AVAudioPlayer * yeahPlayer;
+@property (nonatomic, strong) AVAudioPlayer * sadTrombonesPlayer;
 
 @end
 
@@ -90,7 +96,18 @@
 	
 	self.nameTextField.delegate = self;
 	
+	[self setupAudioPlayer];
+	
 }
+
+-(void) setupAudioPlayer
+{
+	NSURL *yeahFileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"yeah" ofType:@"mp3"]];
+	self.yeahPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:yeahFileURL error:nil];
+	NSURL *sadTrombonesFileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"sadTrombones" ofType:@"mp3"]];
+	self.sadTrombonesPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:sadTrombonesFileURL error:nil];
+}
+
 
 - (void)registerForKeyboardNotifications
 {
@@ -156,6 +173,20 @@
 {
 	[self.navigationController setNavigationBarHidden:YES animated:animated];
 	[super viewWillAppear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+	if ((float)self.numberCorrect / self.numberCards >= 0.5)
+	{
+		[self.yeahPlayer setCurrentTime:0.0];
+		[self.yeahPlayer play];
+	}
+	else
+	{
+		[self.sadTrombonesPlayer setCurrentTime:0.0];
+		[self.sadTrombonesPlayer play];
+	}
 }
 
 -(void) setupAddHighScore
