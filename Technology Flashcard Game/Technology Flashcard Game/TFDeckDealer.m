@@ -35,8 +35,8 @@
 	__block NSMutableArray * easyArrayOfCards = [[NSMutableArray alloc] init];
 	__block NSMutableArray * mediumArrayOfCards = [[NSMutableArray alloc] init];
 	__block NSMutableArray * hardArrayOfCards = [[NSMutableArray alloc] init];
-	__block Flashcard * currentCard;
-	
+//	__block Flashcard * currentCard;
+//
 //	NSString* path = [[NSBundle mainBundle] pathForResource:((CARDS_USE_DUMMY_CARDS) ? @"IsThePictureTechnologyDummy" : @"IsThePictureTechnology")
 //																									 ofType:@"txt"];
 //	NSString* content = [NSString stringWithContentsOfFile:path
