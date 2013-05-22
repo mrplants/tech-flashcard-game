@@ -252,6 +252,8 @@
 		2C7543EA174C622A00B353D0 /* VacuumCleaner.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543D4174C622A00B353D0 /* VacuumCleaner.png */; };
 		2C7543EB174C622A00B353D0 /* Wheelchair.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543D5174C622A00B353D0 /* Wheelchair.png */; };
 		2C7543ED174C660500B353D0 /* sadTrombones.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543EC174C660500B353D0 /* sadTrombones.mp3 */; };
+		2C754484174CFBFA00B353D0 /* icon02-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C754483174CFBFA00B353D0 /* icon02-57x57.png */; };
+		2C754486174CFBFF00B353D0 /* icon02-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C754485174CFBFF00B353D0 /* icon02-114x114.png */; };
 		2C7C92C21733E76300C60CF0 /* NT Items.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C01733E76300C60CF0 /* NT Items.csv */; };
 		2C7C92C31733E76300C60CF0 /* T Items.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C92C11733E76300C60CF0 /* T Items.csv */; };
 		2CA05DE716EE514100147BCF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA05DE616EE514100147BCF /* CoreImage.framework */; };
@@ -522,6 +524,8 @@
 		2C7543D4174C622A00B353D0 /* VacuumCleaner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VacuumCleaner.png; sourceTree = "<group>"; };
 		2C7543D5174C622A00B353D0 /* Wheelchair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheelchair.png; sourceTree = "<group>"; };
 		2C7543EC174C660500B353D0 /* sadTrombones.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadTrombones.mp3; sourceTree = "<group>"; };
+		2C754483174CFBFA00B353D0 /* icon02-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon02-57x57.png"; sourceTree = "<group>"; };
+		2C754485174CFBFF00B353D0 /* icon02-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon02-114x114.png"; sourceTree = "<group>"; };
 		2C7C92C01733E76300C60CF0 /* NT Items.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NT Items.csv"; sourceTree = "<group>"; };
 		2C7C92C11733E76300C60CF0 /* T Items.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "T Items.csv"; sourceTree = "<group>"; };
 		2CA05DE616EE514100147BCF /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -736,6 +740,8 @@
 		2C43A4C716D57EE100143C76 = {
 			isa = PBXGroup;
 			children = (
+				2C754485174CFBFF00B353D0 /* icon02-114x114.png */,
+				2C754483174CFBFA00B353D0 /* icon02-57x57.png */,
 				2C43A4D916D57EE100143C76 /* Technology Flashcard Game */,
 				2C43A4D216D57EE100143C76 /* Frameworks */,
 				2C43A4D116D57EE100143C76 /* Products */,
@@ -1221,6 +1227,8 @@
 				2C7543EA174C622A00B353D0 /* VacuumCleaner.png in Resources */,
 				2C7543EB174C622A00B353D0 /* Wheelchair.png in Resources */,
 				2C7543ED174C660500B353D0 /* sadTrombones.mp3 in Resources */,
+				2C754484174CFBFA00B353D0 /* icon02-57x57.png in Resources */,
+				2C754486174CFBFF00B353D0 /* icon02-114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
