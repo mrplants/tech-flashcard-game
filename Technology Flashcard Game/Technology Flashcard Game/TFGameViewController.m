@@ -136,12 +136,12 @@
 {
 	if ([(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) isTechnology])
 	{
-		self.descriptionLabel.text = @"This is technology!";
+		self.descriptionLabel.text = [(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardDescription];
 		[self showAnswerIncorrect];
 	}
 	else
 	{
-		self.descriptionLabel.text = @"This is NOT technology.";
+		self.descriptionLabel.text = [(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardDescription];
 		[self showAnswerCorrect];
 	}
 	
@@ -155,17 +155,16 @@
 {
 	if ([(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) isTechnology])
 	{
-		self.descriptionLabel.text = @"This is technology!";
+		self.descriptionLabel.text = [(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardDescription];
 		[self showAnswerCorrect];
 	}
 	else
 	{
-		self.descriptionLabel.text = @"This is NOT technology.";
+		self.descriptionLabel.text = [(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardDescription];
 		[self showAnswerIncorrect];
 	}
 	//THIS IS A TEST
 
-	
 	self.yesTechnologyButton.hidden = YES;
 	self.noTechnologyButton.hidden = YES;
 	self.nextButton.hidden = NO;
@@ -192,11 +191,14 @@
 	self.isThisTechnologyLabel.hidden = NO;
 	self.cardNumberLabel.text = [NSString stringWithFormat:@"%d / %d", self.indexOfCurrentCard + 1, self.numberCards];
 	// turn the answer buttons back on for the next question. turnt the next button off
-		
+	
+	
 	[UIView animateWithDuration:SPEED_OF_FLASHCARD_CHANGE
 									 animations:^(void){
 										 self.currentFlashCardView.center = CGPointMake(-self.currentFlashCardView.center.x, self.currentFlashCardView.center.y);
-									 }completion:^(BOOL finished) {
+									 }
+			
+									 completion:^(BOOL finished) {
 										 
 										 _currentFlashCardView.center = CGPointMake(self.cardOnScreenFrame.size.width + self.view.bounds.size.width, self.currentFlashCardView.center.y);
 										 //move the flashcard offscreen right

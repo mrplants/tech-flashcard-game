@@ -37,40 +37,140 @@
 	__block NSMutableArray * hardArrayOfCards = [[NSMutableArray alloc] init];
 	__block Flashcard * currentCard;
 	
-	NSString* path = [[NSBundle mainBundle] pathForResource:((CARDS_USE_DUMMY_CARDS) ? @"IsThePictureTechnologyDummy" : @"IsThePictureTechnology")
-																									 ofType:@"txt"];
-	NSString* content = [NSString stringWithContentsOfFile:path
+//	NSString* path = [[NSBundle mainBundle] pathForResource:((CARDS_USE_DUMMY_CARDS) ? @"IsThePictureTechnologyDummy" : @"IsThePictureTechnology")
+//																									 ofType:@"txt"];
+//	NSString* content = [NSString stringWithContentsOfFile:path
+//																								encoding:NSUTF8StringEncoding
+//																									 error:NULL];
+//	[content enumerateSubstringsInRange:NSMakeRange(0, [content length])
+//															options:NSStringEnumerationByWords
+//													 usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+//														 if ([substring isEqualToString:@"YES"])
+//														 {
+//															 currentCard.isTechnology = YES;
+//														 }
+//														 else if ([substring isEqualToString:@"NO"])
+//														 {
+//															 currentCard.isTechnology = NO;
+//														 }
+//														 else if ([substring isEqualToString:@"EASY"])
+//														 {
+//															 [easyArrayOfCards addObject:currentCard];
+//														 }
+//														 else if ([substring isEqualToString:@"MEDIUM"])
+//														 {
+//															 [mediumArrayOfCards addObject:currentCard];
+//														 }
+//														 else if ([substring isEqualToString:@"HARD"])
+//														 {
+//															 [hardArrayOfCards addObject:currentCard];
+//														 }
+//														 else
+//														 {
+//															 currentCard = [[Flashcard alloc] init];
+//															 currentCard.flashcardImageName = substring;
+//														 }
+//													 }];
+	
+	
+	
+	
+	NSString* pathT = [[NSBundle mainBundle] pathForResource:@"T Items"
+																									 ofType:@"csv"];
+	NSString* contentT = [NSString stringWithContentsOfFile:pathT
 																								encoding:NSUTF8StringEncoding
 																									 error:NULL];
-	[content enumerateSubstringsInRange:NSMakeRange(0, [content length])
-															options:NSStringEnumerationByWords
-													 usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
-														 if ([substring isEqualToString:@"YES"])
-														 {
-															 currentCard.isTechnology = YES;
-														 }
-														 else if ([substring isEqualToString:@"NO"])
-														 {
-															 currentCard.isTechnology = NO;
-														 }
-														 else if ([substring isEqualToString:@"EASY"])
-														 {
-															 [easyArrayOfCards addObject:currentCard];
-														 }
-														 else if ([substring isEqualToString:@"MEDIUM"])
-														 {
-															 [mediumArrayOfCards addObject:currentCard];
-														 }
-														 else if ([substring isEqualToString:@"HARD"])
-														 {
-															 [hardArrayOfCards addObject:currentCard];
-														 }
-														 else
-														 {
-															 currentCard = [[Flashcard alloc] init];
-															 currentCard.flashcardImageName = substring;
-														 }
-													 }];
+	NSArray *linesT = [contentT componentsSeparatedByString:@"\r"];
+	
+	for (NSString * aLine in linesT)
+	{
+		
+//		NSLog(@"%@", aLine);
+
+		
+		NSArray *tokens = [aLine componentsSeparatedByString:@","];
+		
+		
+		NSMutableArray* currentDeck;
+		
+		NSString* difficulty = (NSString *)tokens[0];
+//		NSLog(@"%@", difficulty);
+		NSString* description = (NSString *)tokens[2];
+		NSString* imageName = (NSString *)tokens[3];
+		
+		Flashcard *currentCard = [[Flashcard alloc] init];
+		if ([difficulty isEqualToString:@"Easy"])
+		{ //this is an easy card
+			currentDeck = easyArrayOfCards;
+		} else if ([difficulty isEqualToString:@"Medium"])
+		{ //this is a medium card
+			currentDeck = mediumArrayOfCards;
+		} else if ([difficulty isEqualToString:@"Hard"])
+		{ //this is a hard card
+			currentDeck = hardArrayOfCards;
+		}
+		
+		description = tokens[2];
+		
+		imageName = tokens[3];
+		
+		currentCard.flashcardDescription = description;
+		currentCard.flashcardImageName = imageName;
+		currentCard.isTechnology = YES;
+		
+		[currentDeck addObject:currentCard];
+		
+	}
+	
+
+	
+	
+	
+	NSString* pathNT = [[NSBundle mainBundle] pathForResource:@"NT Items"
+																									 ofType:@"csv"];
+	NSString* contentNT = [NSString stringWithContentsOfFile:pathNT
+																								encoding:NSUTF8StringEncoding
+																									 error:NULL];
+	NSArray *linesNT = [contentNT componentsSeparatedByString:@"\r"];
+	
+	for (NSString * aLine in linesNT)
+	{
+		
+//		NSLog(@"%@", aLine);
+		
+		NSArray *tokens = [aLine componentsSeparatedByString:@","];
+		
+		
+		NSMutableArray* currentDeck;
+		
+		NSString* difficulty = (NSString *)tokens[0];
+		NSString* description = (NSString *)tokens[2];
+		NSString* imageName = (NSString *)tokens[3];
+		
+		Flashcard *currentCard = [[Flashcard alloc] init];
+		if ([difficulty isEqualToString:@"Easy"])
+		{ //this is an easy card
+			currentDeck = easyArrayOfCards;
+		} else if ([difficulty isEqualToString:@"Medium"])
+		{ //this is a medium card
+			currentDeck = mediumArrayOfCards;
+		} else if ([difficulty isEqualToString:@"Hard"])
+		{ //this is a hard card
+			currentDeck = hardArrayOfCards;
+		}
+		
+		description = tokens[2];
+		
+		imageName = tokens[3];
+		
+		currentCard.flashcardDescription = description;
+		currentCard.flashcardImageName = imageName;
+		currentCard.isTechnology = NO;
+		
+		[currentDeck addObject:currentCard];
+		
+	}
+	
 	self.easyDeck = [easyArrayOfCards copy];
 	self.mediumDeck = [mediumArrayOfCards copy];
 	self.hardDeck = [hardArrayOfCards copy];

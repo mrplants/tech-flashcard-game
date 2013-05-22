@@ -13,6 +13,9 @@
 @property (nonatomic, strong) NSString * flashcardImageName;
 //this is the technology/not technology image on the flashcard
 
+@property (nonatomic, strong) NSString * flashcardDescription;
+//a description of the item on the technology flashcard
+
 @property (nonatomic) BOOL isTechnology;
 //YES = image is technology. NO = image is not technology
 

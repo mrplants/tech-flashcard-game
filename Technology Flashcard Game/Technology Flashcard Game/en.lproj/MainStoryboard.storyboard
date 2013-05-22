@@ -85,7 +85,10 @@
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8P0-qa-AeO" customClass="FlashcardView">
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is NOT technology!" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADZ-3h-Bzr">
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is NOT technology!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="ADZ-3h-Bzr">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="181" id="4an-0R-Hn4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -93,13 +96,11 @@
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="XkW-rT-Qyd">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="A0G-TT-05D"/>
-                                            <constraint firstAttribute="height" constant="50" id="ENp-eb-bgH"/>
                                         </constraints>
                                     </imageView>
                                     <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CORRECT!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8A-7P-wZx">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="D4g-xL-aR4"/>
-                                            <constraint firstAttribute="width" constant="182" id="bi5-ll-62z"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,11 +109,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="ADZ-3h-Bzr" firstAttribute="top" secondItem="8P0-qa-AeO" secondAttribute="top" constant="138" id="20M-mc-adU"/>
                                     <constraint firstAttribute="centerX" secondItem="ADZ-3h-Bzr" secondAttribute="centerX" type="user" id="8y5-6r-SbW"/>
                                     <constraint firstItem="XkW-rT-Qyd" firstAttribute="leading" secondItem="8P0-qa-AeO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CTJ-qV-F6h"/>
                                     <constraint firstItem="r8A-7P-wZx" firstAttribute="top" secondItem="8P0-qa-AeO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="RDl-wy-EC9"/>
+                                    <constraint firstItem="ADZ-3h-Bzr" firstAttribute="top" secondItem="XkW-rT-Qyd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Trl-A0-NNo"/>
+                                    <constraint firstAttribute="bottom" secondItem="ADZ-3h-Bzr" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="WSz-BB-pZG"/>
                                     <constraint firstItem="ADZ-3h-Bzr" firstAttribute="leading" secondItem="8P0-qa-AeO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sDL-iG-v9H"/>
+                                    <constraint firstItem="r8A-7P-wZx" firstAttribute="leading" secondItem="XkW-rT-Qyd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="t2a-Zf-Inb"/>
                                     <constraint firstAttribute="trailing" secondItem="r8A-7P-wZx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tzD-SU-Fjs"/>
                                     <constraint firstItem="XkW-rT-Qyd" firstAttribute="top" secondItem="8P0-qa-AeO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wyP-tT-kXz"/>
                                 </constraints>

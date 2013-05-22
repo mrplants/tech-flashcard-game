@@ -51,9 +51,9 @@
 	UIBezierPath * roundedRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:15.0f];
 	[roundedRect addClip];
 	if (self.isCorrect)
-		[[UIColor colorWithRed:100.0f / 255.0f
+		[[UIColor colorWithRed:40.0f / 255.0f
 										 green:255.0f / 255.0f
-											blue:100.0f / 255.0f
+											blue:80.0f / 255.0f
 										 alpha:1.0 ] setFill];
 	if (!self.isCorrect)
 		[[UIColor colorWithRed:255.0f / 255.0f
