@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F34B9317A2E35C006CC58B /* cardStatistics.csv in Resources */ = {isa = PBXBuildFile; fileRef = 14F34B9217A2E35C006CC58B /* cardStatistics.csv */; };
 		2C29FC0316DE736100A4978F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29FC0216DE736100A4978F /* QuartzCore.framework */; };
 		2C35CC4816F21E1200931C8C /* TFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35CC4716F21E1200931C8C /* TFGameViewController.m */; };
 		2C35CC4B16F2216500931C8C /* TFMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35CC4A16F2216500931C8C /* TFMainMenuViewController.m */; };
@@ -268,6 +269,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14F34B9217A2E35C006CC58B /* cardStatistics.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cardStatistics.csv; sourceTree = "<group>"; };
 		2C29FC0216DE736100A4978F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C35CC4616F21E1200931C8C /* TFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFGameViewController.h; sourceTree = "<group>"; };
 		2C35CC4716F21E1200931C8C /* TFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFGameViewController.m; sourceTree = "<group>"; };
@@ -788,6 +790,7 @@
 		2C43A4DA16D57EE100143C76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14F34B9217A2E35C006CC58B /* cardStatistics.csv */,
 				2C7C92C01733E76300C60CF0 /* NT Items.csv */,
 				2C7C92C11733E76300C60CF0 /* T Items.csv */,
 				2C4E02E416F967500043C5A8 /* .gitignore */,
@@ -1233,6 +1236,7 @@
 				2C75448E174D05B600B353D0 /* Default@2x.png in Resources */,
 				2C754492174D06B500B353D0 /* Default-568h@2x.png in Resources */,
 				2C754494174D078400B353D0 /* Default.png in Resources */,
+				14F34B9317A2E35C006CC58B /* cardStatistics.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

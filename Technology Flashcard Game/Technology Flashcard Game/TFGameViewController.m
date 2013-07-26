@@ -43,18 +43,13 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *flashcardWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *aboveFlashcardViewConstraint;
 
+//timer properties
+@property (strong, nonatomic) NSTimer * cardStatisticsTimer;
+@property (nonatomic, strong) NSMutableArray * cardStatisticsArray;
+
 @end
 
 @implementation TFGameViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 #pragma mark - View Lifecycle Methods
 
@@ -77,7 +72,29 @@
 	self.numberCorrect = 0;
 	self.gameProgressView.progress = self.numberCorrect / self.numberCards;
 	self.cardNumberLabel.text = [NSString stringWithFormat:@"%d / %d", self.indexOfCurrentCard + 1, self.numberCards];
-	
+    self.cardStatisticsTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                target:self
+                                                              selector:@selector(anotherSecondOnCard:)
+                                                              userInfo:nil
+                                                               repeats:YES];
+    
+    self.cardStatisticsArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [self.technologyDeck count]; i++)
+    {
+        //add a 0 number to the statistics array for each card in the deck
+        [self.cardStatisticsArray addObject:[[NSNumber alloc] initWithInt:0]];
+    }
+}
+
+//card stistics method. adds one to the current card's time.
+-(void)anotherSecondOnCard:(NSTimer *) timer
+{
+    if(self.indexOfCurrentCard < self.numberCards)
+    {
+        int secondsPerThisCard = [(NSNumber*)self.cardStatisticsArray[self.indexOfCurrentCard] intValue];
+        secondsPerThisCard++;
+        self.cardStatisticsArray[self.indexOfCurrentCard] = [NSNumber numberWithInt:secondsPerThisCard];
+    }
 }
 
 -(void) viewDidLayoutSubviews
@@ -92,6 +109,15 @@
 {
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
 	[super viewWillAppear:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+//    [self.cardStatisticsTimer invalidate];
+    [self saveCardStatistics];
+
 }
 
 #pragma mark - Getters and Setters
@@ -287,6 +313,53 @@
 	[super prepareForSegue:segue sender:sender];
 }
 
+-(int)getAverageTimePerCard
+{
+    int numberCardsToPutInAverage = 0;
+    int totalTimeInCards = 0;
+    for (NSNumber* number in self.cardStatisticsArray)
+    {
+        int timeInThisCard = [number intValue];
+        if (timeInThisCard < 60)
+        {
+            numberCardsToPutInAverage ++;
+            totalTimeInCards += timeInThisCard;
+        }
+    }
+    return (numberCardsToPutInAverage != 0)? totalTimeInCards / numberCardsToPutInAverage : 0;
+}
+
+-(void)saveCardStatistics
+{
+    NSError * error; //create the error
+    
+    //find the documents directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    //make a file name to write the data to using the documents directory:
+    NSString *fileName = [NSString stringWithFormat:@"%@/cardStatistics.csv", documentsDirectory];
+    
+    //get the current content because we will be adding to it
+    NSMutableString* contentT = [[NSString stringWithContentsOfFile:fileName
+                                                       usedEncoding:NSUTF8StringEncoding
+                                                              error:&error] mutableCopy];
+    
+    NSString * stringToAdd = [NSString stringWithFormat:@"average time(seconds): %d", [self getAverageTimePerCard]];
+    
+    [contentT appendFormat: @"%@", stringToAdd];
+    
+    //save content to the documents directory
+    BOOL success = [contentT writeToFile:fileName
+                              atomically:NO
+                                encoding:NSStringEncodingConversionAllowLossy
+                                   error:&error];
+    
+    if(success == NO)
+    {
+        NSLog( @"couldn't write out file to %@, error is %@", fileName, [error localizedDescription]);
+    }
+}
 
 
 @end
