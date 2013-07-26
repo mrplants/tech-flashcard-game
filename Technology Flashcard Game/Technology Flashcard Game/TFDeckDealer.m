@@ -191,6 +191,19 @@
 			for (id card in [self getHardCards:NUMBER_HARD_CARDS_IN_EASY_DECK])
 				[resultArray addObject:card];
 			break;
+            //DEBUG CHECKING THAT EVERY CARD HAS AN IMAGE
+            /*
+             CARDS WITHOUT IMAGES:
+             book - 4
+             */
+//        case 1:
+//			for (id card in [self getEasyCards:[self.easyDeck count]])
+//				[resultArray addObject:card];
+//			for (id card in [self getMediumCards:[self.mediumDeck count]])
+//				[resultArray addObject:card];
+//			for (id card in [self getHardCards:[self.hardDeck count]])
+//				[resultArray addObject:card];
+//            break;
 		case 2:
 			for (id card in [self getEasyCards:NUMBER_EASY_CARDS_IN_MEDIUM_DECK])
 				[resultArray addObject:card];
@@ -237,7 +250,9 @@
 //	NSInteger numberElements = [self.easyDeck count] - 1;
 	for (NSUInteger i = 0; i < numberEasyCards; ++i) {
 		// Select a random element between i and end of array to swap with.
-		NSInteger n = (arc4random() % ([self.easyDeck count] - 1));
+		NSInteger n;
+        if([self.easyDeck count] > 1) n = (arc4random() % ([self.easyDeck count] - 1));
+        else n = 0;
 		[returnArray addObject:self.easyDeck[n]];
 		
 		NSMutableArray * temp = [self.easyDeck mutableCopy];
@@ -255,7 +270,9 @@
 //	NSInteger numberElements = [self.mediumDeck count] - 1;
 	for (NSUInteger i = 0; i < numberMediumCards; ++i) {
 		// Select a random element between i and end of array to swap with.
-		NSInteger n = (arc4random() % ([self.mediumDeck count] - 1));
+		NSInteger n;
+        if([self.mediumDeck count] > 1) n = (arc4random() % ([self.mediumDeck count] - 1));
+        else n = 0;
 		[returnArray addObject:self.mediumDeck[n]];
 		
 		NSMutableArray * temp = [self.mediumDeck mutableCopy];
@@ -273,7 +290,9 @@
 //	NSInteger numberElements = [self.hardDeck count] - 1;
 	for (NSUInteger i = 0; i < numberHardCards; ++i) {
 		// Select a random element between i and end of array to swap with.
-		NSInteger n = (arc4random() % ([self.hardDeck count] - 1));
+		NSInteger n;
+        if([self.hardDeck count] > 1) n = (arc4random() % ([self.hardDeck count] - 1));
+        else n = 0;
 		[returnArray addObject:self.hardDeck[n]];
 		
 		NSMutableArray * temp = [self.hardDeck mutableCopy];

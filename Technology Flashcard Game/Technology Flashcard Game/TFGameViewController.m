@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 EiE. All rights reserved.
 //
 
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 #import "TFGameViewController.h"
 #import "TFPostGameViewController.h"
 #import "FlashcardView.h"
@@ -36,6 +38,11 @@
 @property (nonatomic) NSInteger numberCorrect;
 @property (nonatomic) NSInteger numberCards;
 
+//constraints to keep flashcard centered
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *flashcardHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *flashcardWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *aboveFlashcardViewConstraint;
+
 @end
 
 @implementation TFGameViewController
@@ -50,6 +57,15 @@
 }
 
 #pragma mark - View Lifecycle Methods
+
+-(void)updateViewConstraints
+{
+    [super updateViewConstraints];
+    
+    self.flashcardHeightConstraint.constant = self.flashcardWidthConstraint.constant = 280.0f;
+    if (IS_IPHONE_5) self.aboveFlashcardViewConstraint.constant = 50; 
+    
+}
 
 - (void)viewDidLoad
 {
