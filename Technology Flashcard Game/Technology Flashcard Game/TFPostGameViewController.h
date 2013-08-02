@@ -13,6 +13,7 @@
 @property (nonatomic) NSInteger numberCorrect;
 @property (nonatomic) NSInteger numberCards;
 @property (nonatomic) NSInteger difficultyLevel;
+@property (nonatomic) NSInteger averageTimePerCard;
 
 @end
  

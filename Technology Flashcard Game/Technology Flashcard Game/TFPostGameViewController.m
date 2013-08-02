@@ -35,6 +35,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UITextField *activeField;
+@property (weak, nonatomic) IBOutlet UILabel *feedbackLabel;
+@property (weak, nonatomic) IBOutlet UILabel *averageTimePerCardLabel;
 
 //for the audio player
 @property (nonatomic, strong) AVAudioPlayer * yeahPlayer;
@@ -74,6 +76,10 @@
 	
 	
 	double score = (double)self.numberCorrect / self.numberCards;
+	if (score < 0.5) self.feedbackLabel.text = @"Try Again...";
+	if (self.averageTimePerCard) {
+		self.averageTimePerCardLabel.text = [NSString stringWithFormat:@"%d Seconds Per Card", self.averageTimePerCard];
+	} else self.averageTimePerCardLabel.text = @"";
 	if (!self.topFiveHighScores || ([self.topFiveHighScores count] < 5))
 	{
 		[self setupAddHighScore];

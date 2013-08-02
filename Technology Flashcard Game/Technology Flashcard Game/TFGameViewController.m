@@ -111,15 +111,6 @@
 	[super viewWillAppear:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-//    [self.cardStatisticsTimer invalidate];
-    [self saveCardStatistics];
-
-}
-
 #pragma mark - Getters and Setters
 
 -(NSArray *) technologyDeck
@@ -304,10 +295,13 @@
 		// Get reference to the destination view controller
 		TFPostGameViewController * postGameViewController = [segue destinationViewController];
 		
+		[self saveCardStatistics];
+		
 		// Pass any objects to the view controller here, like...
 		postGameViewController.numberCards = self.numberCards;
 		postGameViewController.numberCorrect = self.numberCorrect;
 		postGameViewController.difficultyLevel = self.difficultyLevel;
+		postGameViewController.averageTimePerCard = [self getAverageTimePerCard];
 	}
 
 	[super prepareForSegue:segue sender:sender];
@@ -322,11 +316,11 @@
         int timeInThisCard = [number intValue];
         if (timeInThisCard < 60)
         {
-            numberCardsToPutInAverage ++;
+            numberCardsToPutInAverage++;
             totalTimeInCards += timeInThisCard;
         }
     }
-    return (numberCardsToPutInAverage != 0)? totalTimeInCards / numberCardsToPutInAverage : 0;
+    return ceil((numberCardsToPutInAverage != 0)? (double)totalTimeInCards / numberCardsToPutInAverage : 0);
 }
 
 -(void)saveCardStatistics
