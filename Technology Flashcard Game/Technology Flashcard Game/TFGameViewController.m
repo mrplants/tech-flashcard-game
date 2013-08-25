@@ -14,6 +14,7 @@
 #import "Flashcard.h"
 #import "TechnologyFlashcardGameButton.h"
 #import "Constants.h"
+#import <Parse/Parse.h>
 
 #pragma mark - Interface/Properties
 @interface TFGameViewController ()
@@ -217,8 +218,6 @@
 	self.currentFlashCardView.currentFlashcard = self.technologyDeck[++self.indexOfCurrentCard];
 	//increment and update the image on the card
 	
-	self.yesTechnologyButton.hidden = NO;
-	self.noTechnologyButton.hidden = NO;
 	self.nextButton.hidden = YES;
 	self.descriptionLabel.hidden = YES;
 	self.isThisTechnologyLabel.hidden = NO;
@@ -240,6 +239,9 @@
 										 self.correctImageView.hidden = YES;
 										 self.correctLabel.hidden = YES;
 										 //setup the flashcard for face up view
+										 
+										 self.yesTechnologyButton.hidden = NO;
+										 self.noTechnologyButton.hidden = NO;
 										 
 										 [UIView animateWithDuration:SPEED_OF_FLASHCARD_CHANGE
 																			animations:^(void){
@@ -353,6 +355,21 @@
     {
         NSLog( @"couldn't write out file to %@, error is %@", fileName, [error localizedDescription]);
     }
+	
+	//also save the statistics online:
+	
+	NSMutableArray * cardNameArray;
+	for (Flashcard * card in self.technologyDeck)
+	{
+    [cardNameArray addObject:[(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardImageName]];
+	}
+	
+//	PFObject *gameSession = [PFObject objectWithClassName:@"GamePlay"];
+//	[gameSession setObject:[NSNumber numberWithInt:1337] forKey:@"card Deck"];
+//	[gameSession setObject:cardNameArray forKey:@"Card Deck"];
+//	[gameScore setObject:@"Sean Plott" forKey:@"playerName"];
+//	[gameScore setObject:[NSNumber numberWithBool:NO] forKey:@"cheatMode"];
+//	[gameScore saveInBackground];
 }
 
 

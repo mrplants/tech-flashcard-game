@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14F34B9317A2E35C006CC58B /* cardStatistics.csv in Resources */ = {isa = PBXBuildFile; fileRef = 14F34B9217A2E35C006CC58B /* cardStatistics.csv */; };
+		2C21BDB217AC26EC00406608 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C21BDB117AC26EC00406608 /* Parse.framework */; };
 		2C29FC0316DE736100A4978F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29FC0216DE736100A4978F /* QuartzCore.framework */; };
 		2C35CC4816F21E1200931C8C /* TFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35CC4716F21E1200931C8C /* TFGameViewController.m */; };
 		2C35CC4B16F2216500931C8C /* TFMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35CC4A16F2216500931C8C /* TFMainMenuViewController.m */; };
@@ -225,6 +226,13 @@
 		2C5573D616F2358000C4D54A /* Wind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C55733C16F2358000C4D54A /* Wind.png */; };
 		2C5573D716F2358000C4D54A /* Wolf.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C55733D16F2358000C4D54A /* Wolf.png */; };
 		2C5573E216F263C700C4D54A /* TechnologyFlashcardGameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5573E116F263C700C4D54A /* TechnologyFlashcardGameButton.m */; };
+		2C6FBFF917BBF6D30047CC05 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FBFF817BBF6D30047CC05 /* CFNetwork.framework */; };
+		2C6FBFFB17BBF6DE0047CC05 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FBFFA17BBF6DE0047CC05 /* CoreLocation.framework */; };
+		2C6FBFFD17BBF6EC0047CC05 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FBFFC17BBF6EB0047CC05 /* libz.1.1.3.dylib */; };
+		2C6FBFFF17BBF6F70047CC05 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FBFFE17BBF6F70047CC05 /* MobileCoreServices.framework */; };
+		2C6FC00117BBF7050047CC05 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FC00017BBF7050047CC05 /* Security.framework */; };
+		2C6FC00317BBF70D0047CC05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FC00217BBF70D0047CC05 /* StoreKit.framework */; };
+		2C6FC00517BBF7150047CC05 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FC00417BBF7150047CC05 /* SystemConfiguration.framework */; };
 		2C743C2F16F34EE800DBFA4E /* TFDeckDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C743C2E16F34EE800DBFA4E /* TFDeckDealer.m */; };
 		2C743C3D16F38E8C00DBFA4E /* IsThePictureTechnologyDummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C743C3C16F38E8C00DBFA4E /* IsThePictureTechnologyDummy.txt */; };
 		2C7543D6174C622A00B353D0 /* AssemblyLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7543C0174C622A00B353D0 /* AssemblyLine.png */; };
@@ -270,6 +278,7 @@
 
 /* Begin PBXFileReference section */
 		14F34B9217A2E35C006CC58B /* cardStatistics.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cardStatistics.csv; sourceTree = "<group>"; };
+		2C21BDB117AC26EC00406608 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Technology Flashcard Game/Parse.framework"; sourceTree = "<group>"; };
 		2C29FC0216DE736100A4978F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C35CC4616F21E1200931C8C /* TFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFGameViewController.h; sourceTree = "<group>"; };
 		2C35CC4716F21E1200931C8C /* TFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFGameViewController.m; sourceTree = "<group>"; };
@@ -498,6 +507,13 @@
 		2C5573D816F24B0800C4D54A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2C5573E016F263C700C4D54A /* TechnologyFlashcardGameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechnologyFlashcardGameButton.h; sourceTree = "<group>"; };
 		2C5573E116F263C700C4D54A /* TechnologyFlashcardGameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechnologyFlashcardGameButton.m; sourceTree = "<group>"; };
+		2C6FBFF817BBF6D30047CC05 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2C6FBFFA17BBF6DE0047CC05 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2C6FBFFC17BBF6EB0047CC05 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		2C6FBFFE17BBF6F70047CC05 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2C6FC00017BBF7050047CC05 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2C6FC00217BBF70D0047CC05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2C6FC00417BBF7150047CC05 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2C743C2D16F34EE800DBFA4E /* TFDeckDealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDeckDealer.h; sourceTree = "<group>"; };
 		2C743C2E16F34EE800DBFA4E /* TFDeckDealer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDeckDealer.m; sourceTree = "<group>"; };
 		2C743C3C16F38E8C00DBFA4E /* IsThePictureTechnologyDummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IsThePictureTechnologyDummy.txt; sourceTree = "<group>"; };
@@ -548,13 +564,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE857D616FD174400BADFFA /* AVFoundation.framework in Frameworks */,
+				2C6FC00517BBF7150047CC05 /* SystemConfiguration.framework in Frameworks */,
+				2C6FC00317BBF70D0047CC05 /* StoreKit.framework in Frameworks */,
+				2C6FC00117BBF7050047CC05 /* Security.framework in Frameworks */,
+				2C6FBFFF17BBF6F70047CC05 /* MobileCoreServices.framework in Frameworks */,
+				2C6FBFFD17BBF6EC0047CC05 /* libz.1.1.3.dylib in Frameworks */,
+				2C6FBFFB17BBF6DE0047CC05 /* CoreLocation.framework in Frameworks */,
+				2C6FBFF917BBF6D30047CC05 /* CFNetwork.framework in Frameworks */,
 				2CE857D416FD174000BADFFA /* AudioToolbox.framework in Frameworks */,
+				2CE857D616FD174400BADFFA /* AVFoundation.framework in Frameworks */,
 				2CA05DE716EE514100147BCF /* CoreImage.framework in Frameworks */,
 				2C29FC0316DE736100A4978F /* QuartzCore.framework in Frameworks */,
 				2C43A4D416D57EE100143C76 /* UIKit.framework in Frameworks */,
 				2C43A4D616D57EE100143C76 /* Foundation.framework in Frameworks */,
 				2C43A4D816D57EE100143C76 /* CoreGraphics.framework in Frameworks */,
+				2C21BDB217AC26EC00406608 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +785,14 @@
 		2C43A4D216D57EE100143C76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C6FC00417BBF7150047CC05 /* SystemConfiguration.framework */,
+				2C6FC00217BBF70D0047CC05 /* StoreKit.framework */,
+				2C6FC00017BBF7050047CC05 /* Security.framework */,
+				2C6FBFFE17BBF6F70047CC05 /* MobileCoreServices.framework */,
+				2C6FBFFC17BBF6EB0047CC05 /* libz.1.1.3.dylib */,
+				2C6FBFFA17BBF6DE0047CC05 /* CoreLocation.framework */,
+				2C6FBFF817BBF6D30047CC05 /* CFNetwork.framework */,
+				2C21BDB117AC26EC00406608 /* Parse.framework */,
 				2CE857D516FD174400BADFFA /* AVFoundation.framework */,
 				2CE857D316FD174000BADFFA /* AudioToolbox.framework */,
 				2CA05DE616EE514100147BCF /* CoreImage.framework */,
@@ -1341,6 +1373,10 @@
 		2C43A4F416D57EE200143C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Technology Flashcard Game\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Technology Flashcard Game/Technology Flashcard Game-Prefix.pch";
 				INFOPLIST_FILE = "Technology Flashcard Game/Technology Flashcard Game-Info.plist";
@@ -1352,6 +1388,10 @@
 		2C43A4F516D57EE200143C76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Technology Flashcard Game\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Technology Flashcard Game/Technology Flashcard Game-Prefix.pch";
 				INFOPLIST_FILE = "Technology Flashcard Game/Technology Flashcard Game-Info.plist";

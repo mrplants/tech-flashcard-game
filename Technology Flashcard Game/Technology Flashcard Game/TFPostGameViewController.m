@@ -78,7 +78,8 @@
 	double score = (double)self.numberCorrect / self.numberCards;
 	if (score < 0.5) self.feedbackLabel.text = @"Try Again...";
 	if (self.averageTimePerCard) {
-		self.averageTimePerCardLabel.text = [NSString stringWithFormat:@"%d Seconds Per Card", self.averageTimePerCard];
+		if(self.averageTimePerCard != 1) self.averageTimePerCardLabel.text = [NSString stringWithFormat:@"%d Seconds Per Card", self.averageTimePerCard];
+		if(self.averageTimePerCard == 1) self.averageTimePerCardLabel.text = [NSString stringWithFormat:@"%d Second Per Card", self.averageTimePerCard];
 	} else self.averageTimePerCardLabel.text = @"";
 	if (!self.topFiveHighScores || ([self.topFiveHighScores count] < 5))
 	{
@@ -113,7 +114,6 @@
 	NSURL *sadTrombonesFileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"sadTrombones" ofType:@"mp3"]];
 	self.sadTrombonesPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:sadTrombonesFileURL error:nil];
 }
-
 
 - (void)registerForKeyboardNotifications
 {
@@ -167,6 +167,13 @@
 {
 	[self addNewScore];
 	//[textField resignFirstResponder];
+	return YES;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+	if([textField.text length] > 6)
+		return NO;
 	return YES;
 }
 
