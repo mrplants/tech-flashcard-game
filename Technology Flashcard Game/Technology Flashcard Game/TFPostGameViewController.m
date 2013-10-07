@@ -46,6 +46,11 @@
 
 @implementation TFPostGameViewController
 
+-(BOOL) prefersStatusBarHidden
+{
+	return YES;
+}
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];

@@ -28,6 +28,11 @@
 
 @implementation TFMainMenuViewController
 
+-(BOOL) prefersStatusBarHidden
+{
+	return YES;
+}
+
 -(TFDeckDealer *)deckDealer
 {
 	if (!_deckDealer)

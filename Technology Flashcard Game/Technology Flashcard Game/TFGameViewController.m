@@ -54,6 +54,11 @@
 
 #pragma mark - View Lifecycle Methods
 
+-(BOOL) prefersStatusBarHidden
+{
+	return YES;
+}
+
 -(void)updateViewConstraints
 {
     [super updateViewConstraints];
@@ -98,16 +103,17 @@
     }
 }
 
--(void) viewDidLayoutSubviews
+-(void) viewDidAppear:(BOOL)animated
 {
-	[self setupButtons];
-	[self setupView];
-	[self setupGameAndStart];
+	[super viewDidAppear:animated];
 	
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	[self setupButtons];
+	[self setupView];
+	[self setupGameAndStart];
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
 	[super viewWillAppear:animated];
 }
@@ -358,18 +364,19 @@
 	
 	//also save the statistics online:
 	
-	NSMutableArray * cardNameArray;
+	NSMutableArray * cardNameArray = [[NSMutableArray alloc] init];
+	int index = 0;
 	for (Flashcard * card in self.technologyDeck)
 	{
-    [cardNameArray addObject:[(Flashcard *)(self.technologyDeck[self.indexOfCurrentCard]) flashcardImageName]];
+    [cardNameArray addObject:@{@"CardName": [(Flashcard *)(self.technologyDeck[index]) flashcardImageName],
+															 @"Correct":[NSNumber numberWithBool:[(NSNumber *)(self.cardStatisticsArray[index]) boolValue]]}];
+		index++;
 	}
 	
-//	PFObject *gameSession = [PFObject objectWithClassName:@"GamePlay"];
-//	[gameSession setObject:[NSNumber numberWithInt:1337] forKey:@"card Deck"];
-//	[gameSession setObject:cardNameArray forKey:@"Card Deck"];
-//	[gameScore setObject:@"Sean Plott" forKey:@"playerName"];
-//	[gameScore setObject:[NSNumber numberWithBool:NO] forKey:@"cheatMode"];
-//	[gameScore saveInBackground];
+	PFObject *gameSession = [PFObject objectWithClassName:@"GamePlay"];
+	[gameSession setObject:cardNameArray forKey:@"cardDeck"];
+	[gameSession saveInBackground];
+	
 }
 
 

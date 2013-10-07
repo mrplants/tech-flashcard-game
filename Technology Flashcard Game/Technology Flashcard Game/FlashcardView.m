@@ -15,6 +15,11 @@
 
 @implementation FlashcardView
 
+-(BOOL) prefersStatusBarHidden
+{
+	return YES;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

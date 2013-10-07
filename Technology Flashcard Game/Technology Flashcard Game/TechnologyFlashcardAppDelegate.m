@@ -18,6 +18,9 @@
 	
 	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 	
+	[application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+
+	
 	// Override point for customization after application launch.
 	return YES;
 }
