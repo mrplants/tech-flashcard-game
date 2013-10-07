@@ -269,6 +269,7 @@
 		2CA05DE716EE514100147BCF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA05DE616EE514100147BCF /* CoreImage.framework */; };
 		2CA05DE916EE785100147BCF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA05DE816EE785100147BCF /* background.png */; };
 		2CA05DEC16EE7A3C00147BCF /* FlashcardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */; };
+		2CA3BC0D18037A3F00F6E640 /* Flashcard_iOS7_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BC0C18037A3F00F6E640 /* Flashcard_iOS7_icon.png */; };
 		2CE857CE16FCCD9700BADFFA /* EiE Logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE857CD16FCCD9700BADFFA /* EiE Logo_small.png */; };
 		2CE857D416FD174000BADFFA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE857D316FD174000BADFFA /* AudioToolbox.framework */; };
 		2CE857D616FD174400BADFFA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE857D516FD174400BADFFA /* AVFoundation.framework */; };
@@ -552,6 +553,7 @@
 		2CA05DE816EE785100147BCF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		2CA05DEA16EE7A3C00147BCF /* FlashcardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashcardView.h; sourceTree = "<group>"; };
 		2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashcardView.m; sourceTree = "<group>"; };
+		2CA3BC0C18037A3F00F6E640 /* Flashcard_iOS7_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashcard_iOS7_icon.png; sourceTree = "<group>"; };
 		2CE857CD16FCCD9700BADFFA /* EiE Logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EiE Logo_small.png"; sourceTree = "<group>"; };
 		2CE857D316FD174000BADFFA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CE857D516FD174400BADFFA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -768,6 +770,7 @@
 		2C43A4C716D57EE100143C76 = {
 			isa = PBXGroup;
 			children = (
+				2CA3BC0C18037A3F00F6E640 /* Flashcard_iOS7_icon.png */,
 				2C43A4D916D57EE100143C76 /* Technology Flashcard Game */,
 				2C43A4D216D57EE100143C76 /* Frameworks */,
 				2C43A4D116D57EE100143C76 /* Products */,
@@ -1229,6 +1232,7 @@
 				2C36E33016F3DA5100E723A1 /* 19TM.png in Resources */,
 				2C36E33116F3DA5100E723A1 /* 20NTE.png in Resources */,
 				2C36E33216F3DA5100E723A1 /* 20NTH.png in Resources */,
+				2CA3BC0D18037A3F00F6E640 /* Flashcard_iOS7_icon.png in Resources */,
 				2C36E33316F3DA5100E723A1 /* 20NTM.png in Resources */,
 				2C36E33416F3DA5100E723A1 /* 20TE.png in Resources */,
 				2C36E33516F3DA5100E723A1 /* 20TH.png in Resources */,
