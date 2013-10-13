@@ -554,6 +554,8 @@
 		2CA05DEA16EE7A3C00147BCF /* FlashcardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashcardView.h; sourceTree = "<group>"; };
 		2CA05DEB16EE7A3C00147BCF /* FlashcardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashcardView.m; sourceTree = "<group>"; };
 		2CA3BC0C18037A3F00F6E640 /* Flashcard_iOS7_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashcard_iOS7_icon.png; sourceTree = "<group>"; };
+		2CA3BC311808776500F6E640 /* iOS Simulator Screen shot Oct 11, 2013 2.10.18 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Oct 11, 2013 2.10.18 PM.png"; sourceTree = "<group>"; };
+		2CA3BC321808777600F6E640 /* iOS Simulator Screen shot Oct 11, 2013 2.10.56 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Oct 11, 2013 2.10.56 PM.png"; sourceTree = "<group>"; };
 		2CE857CD16FCCD9700BADFFA /* EiE Logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EiE Logo_small.png"; sourceTree = "<group>"; };
 		2CE857D316FD174000BADFFA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CE857D516FD174400BADFFA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -770,6 +772,8 @@
 		2C43A4C716D57EE100143C76 = {
 			isa = PBXGroup;
 			children = (
+				2CA3BC321808777600F6E640 /* iOS Simulator Screen shot Oct 11, 2013 2.10.56 PM.png */,
+				2CA3BC311808776500F6E640 /* iOS Simulator Screen shot Oct 11, 2013 2.10.18 PM.png */,
 				2CA3BC0C18037A3F00F6E640 /* Flashcard_iOS7_icon.png */,
 				2C43A4D916D57EE100143C76 /* Technology Flashcard Game */,
 				2C43A4D216D57EE100143C76 /* Frameworks */,
