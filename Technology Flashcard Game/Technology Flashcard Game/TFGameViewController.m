@@ -47,6 +47,7 @@
 //timer properties
 @property (strong, nonatomic) NSTimer * cardStatisticsTimer;
 @property (nonatomic, strong) NSMutableArray * cardStatisticsArray;
+@property (nonatomic, strong) NSMutableArray * cardCorrectArray;
 
 @end
 
@@ -126,6 +127,14 @@
 		_technologyDeck = [[NSArray alloc] init];
 	
 	return _technologyDeck;
+}
+
+-(NSMutableArray *)cardCorrectArray
+{
+    if (!_cardCorrectArray) {
+        _cardCorrectArray = [[NSMutableArray alloc] init];
+    }
+    return _cardCorrectArray;
 }
 
 #pragma mark - Setup Methods
@@ -268,6 +277,7 @@
 	self.numberCorrect++;
 	self.correctLabel.text = @"CORRECT!";
 	self.correctImageView.image = self.currentFlashCardView.correctImage;
+    [self.cardCorrectArray addObject:[NSNumber numberWithBool:YES]];
 	[self flipCard];
 }
 
@@ -276,6 +286,7 @@
 	self.currentFlashCardView.isCorrect = NO;
 	self.correctLabel.text = @"INCORRECT";
 	self.correctImageView.image = self.currentFlashCardView.inCorrectImage;
+    [self.cardCorrectArray addObject:[NSNumber numberWithBool:NO]];
 	[self flipCard];
 }
 
@@ -333,34 +344,34 @@
 
 -(void)saveCardStatistics
 {
-    NSError * error; //create the error
-    
-    //find the documents directory
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    //make a file name to write the data to using the documents directory:
-    NSString *fileName = [NSString stringWithFormat:@"%@/cardStatistics.csv", documentsDirectory];
-    
-    //get the current content because we will be adding to it
-    NSMutableString* contentT = [[NSString stringWithContentsOfFile:fileName
-                                                       usedEncoding:NSUTF8StringEncoding
-                                                              error:&error] mutableCopy];
-    
-    NSString * stringToAdd = [NSString stringWithFormat:@"average time(seconds): %d", [self getAverageTimePerCard]];
-    
-    [contentT appendFormat: @"%@", stringToAdd];
-    
-    //save content to the documents directory
-    BOOL success = [contentT writeToFile:fileName
-                              atomically:NO
-                                encoding:NSStringEncodingConversionAllowLossy
-                                   error:&error];
-    
-    if(success == NO)
-    {
-        NSLog( @"couldn't write out file to %@, error is %@", fileName, [error localizedDescription]);
-    }
+//    NSError * error; //create the error
+//    
+//    //find the documents directory
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    
+//    //make a file name to write the data to using the documents directory:
+//    NSString *fileName = [NSString stringWithFormat:@"%@/cardStatistics.csv", documentsDirectory];
+//    
+//    //get the current content because we will be adding to it
+//    NSMutableString* contentT = [[NSString stringWithContentsOfFile:fileName
+//                                                       usedEncoding:NSUTF8StringEncoding
+//                                                              error:&error] mutableCopy];
+//    
+//    NSString * stringToAdd = [NSString stringWithFormat:@"average time(seconds): %d", [self getAverageTimePerCard]];
+//    
+//    [contentT appendFormat: @"%@", stringToAdd];
+//    
+//    //save content to the documents directory
+//    BOOL success = [contentT writeToFile:fileName
+//                              atomically:NO
+//                                encoding:NSStringEncodingConversionAllowLossy
+//                                   error:&error];
+//    
+//    if(success == NO)
+//    {
+//        NSLog( @"couldn't write out file to %@, error is %@", fileName, [error localizedDescription]);
+//    }
 	
 	//also save the statistics online:
 	
@@ -369,7 +380,8 @@
 	for (Flashcard * card in self.technologyDeck)
 	{
     [cardNameArray addObject:@{@"CardName": [(Flashcard *)(self.technologyDeck[index]) flashcardImageName],
-															 @"Correct":[NSNumber numberWithBool:[(NSNumber *)(self.cardStatisticsArray[index]) boolValue]]}];
+                               @"Time":self.cardStatisticsArray[index],
+                               @"Correct":self.cardCorrectArray[index]}];
 		index++;
 	}
 	
